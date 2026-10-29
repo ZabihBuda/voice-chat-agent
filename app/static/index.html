@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Voice Chat Agent</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main>
+    <h1>Ask us anything</h1>
+    <p class="hint">Tap the mic and speak your question. You'll get the answer as text and audio.</p>
+
+    <div id="chat" aria-live="polite"></div>
+
+    <button id="mic" aria-label="Speak your question">🎤</button>
+    <p id="status">Tap the mic to start.</p>
+
+    <form id="text-form">
+      <input id="text-input" type="text" placeholder="Or type your question…" autocomplete="off" />
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/microsoft-cognitiveservices-speech-sdk@1.40.0/distrib/browser/microsoft.cognitiveservices.speech.sdk.bundle-min.js"></script>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>
